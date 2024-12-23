@@ -1,0 +1,23 @@
+version : '3.9'
+
+services :
+
+  application :
+    build : Python
+    ports :
+      - "8080:8080"
+    depends_on :
+      - tensor
+    networks :
+      - app-network
+
+  tensor :
+    build : Hut
+    ports :
+      - "8501:8501"
+    networks :
+      - app-network
+
+networks :
+  app-network :
+    driver : bridge

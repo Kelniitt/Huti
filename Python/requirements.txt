@@ -1,0 +1,9 @@
+pillow == 10.4.0
+
+fastapi[standard]
+
+fastapi == 0.115.5
+
+numpy == 2.0.2
+
+requests
